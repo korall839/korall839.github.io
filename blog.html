@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        main {
+            background-color: rgb(20, 10, 30);
+            border-radius: 90px;
+            border: 1px solid;
+            border-color: rgb(25, 45, 50);
+        }
+        body {
+            background-color: rgb(10, 0, 15);
+            color: #7777ff;
+            text-align: center;
+        }
+        p {
+            color: #b8b8b8;
+        }
+        a {
+            color: blueviolet;
+            &.back {
+                display: block;
+                text-align: left;
+            }
+        }
+        div {
+            border: 3px solid;
+            border-color: rgb(0, 200, 255);
+            &.no_line {
+                border-color: rgba(0, 0, 0, 0);
+            }
+            &.line {
+                border-color: rgba(0, 0, 0, 0);
+                display: flex;
+            }
+            &.prodgect {
+                flex: 1;
+                border: 1px solid;
+                border-color: rgb(0, 200, 255);
+            }
+            &.mn {
+                border: 1px solid;
+                border-color: rgb(0, 200, 255);
+            }
+            &.me {
+                border: 2px solid;
+                border-color: rgb(0, 200, 255);
+            }
+        }   
+    </style>
 </head>
 <body>
-    
+    <a href="index.html" class="back">обратно</a>
+    <main>
+        <h3>
+            Пересказы
+        </h3>
+        <div class="no_line">
+            <div class="line">
+                <div class="prodgect">
+                    <a href="blog/packer.html">packer</a>
+                </div>
+                <div class="prodgect">
+                    <a>rpg</a>
+                </div>
+                <div class="prodgect">
+                    <a>тех. посты</a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
