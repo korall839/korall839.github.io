@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>рекурсия</title>
+    <style>
+        body {
+            background-color: rgb(29, 29, 29);
+            color: rgba(118, 173, 101, 0.75);
+            text-align: center;
+            padding-top: 15px;
+        }
+        a {
+            display: block;
+            text-align: left;
+            color: blueviolet;
+        }
+        div {
+            color: #0000ff;
+            border: 10px solid;
+            width: 950px;
+            margin: 0px auto;
+            padding: 10px;
+            border-radius: 90px;
+            background-color: black;
+        }
+        canvas {
+            background-color: #111111;
+        }
+        .tree {
+            color: #0000ff;
+            width: auto;
+            background-color: black;
+            display: flex;
+            border: 0px solid;
+        }
+        .context {
+            width: auto;
+            border: 0px solid;
+            margin: 275px auto;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">обратно</a>
+    <div>
+        <h3>
+            мой фрактал
+        </h3>
+        <div  class="tree">
+            <div class="context">
+                глубина
+                <br>
+                <input type="range" min="1" max="20" value="1" id="tree_input">
+            </div>
+            <canvas width="800px" height="400px" id="tree_paint"></canvas>
+        </div>
+    </div>
+    <script>
+        const canvas = document.getElementById("tree_paint");
+        const pero = canvas.getContext('2d');
+        const inpu = document.getElementById("tree_input");
+        inpu.addEventListener("input",() =>{
+            pero.clearRect(0,0,1100,1100)
+
+            let b = Number(inpu.value);
+            let a1 = 400;
+            let a2 = 400;
+            let c = 0
+            let d = 0
+
+            for (let i = 0; i < b; i++) {
+
+
+                pero.strokeStyle = "#00ff00";
+                pero.lineWidth = 5;
+
+                pero.beginPath();
+                pero.moveTo(400-d,a1);
+                a1 = a1-10;
+                pero.lineTo(400-c,a1);
+
+                pero.stroke();
+
+                pero.beginPath();
+                pero.moveTo(400+d,a2);
+                a2 = a2-10;
+                pero.lineTo(400+c,a2);
+
+                pero.stroke();
+
+                d=c
+                c = c+(i+1)*2;
+            }
+        })
+
+        let b = Number(inpu.value);
+        let a = 400;
+
+        pero.strokeStyle = "#00ff00";
+        pero.lineWidth = 5;
+
+        pero.beginPath();
+        pero.moveTo(400,a);
+        a = a-10;
+        pero.lineTo(400,a);
+
+        pero.stroke();
+    </script>
+</body>
+</html>

@@ -25,9 +25,9 @@
         div {
             border: 3px solid;
             border-color: rgb(0, 200, 255);
-
-
-
+            &.no_line {
+                border-color: rgba(0, 0, 0, 0);
+            }
             &.line {
                 border-color: rgba(0, 0, 0, 0);
                 display: flex;
@@ -35,6 +35,7 @@
             &.prodgect {
                 flex: 1;
                 border: 1px solid;
+                border-color: rgb(0, 200, 255);
             }
             &.mn {
                 border: 1px solid;
@@ -56,24 +57,34 @@
             Я программист, пишу на: python, html/css/js и nasm ассемблере.
         </p>
         <div class="line">
-            <div>
-                <div class="mn">
-                    <a href="https://dtf.ru/id3527212">мой dtf</a>
-                </div>
-                <div class="mn">
-                    <a>кракий пересказ <br> постов</a>
-                </div>
-                <div class="me">
-                    <a href="https://github.com/korall839">мой github</a>
+            <div class="no_line">
+                <div>
+                    <div class="mn">
+                        <a href="https://dtf.ru/id3527212">мой dtf</a>
+                    </div>
+                    <div class="mn">
+                        <a>кракий пересказ <br> постов</a>
+                    </div>
+                    <div class="me">
+                        <a href="https://github.com/korall839">мой github</a>
+                    </div>
                 </div>
             </div>
             <div class="prodgect">
                 <div class="me">
                     <h4>проекты</h4>
-                    
                 </div>
-                <div class="me">
+                <div class="prodgect">
                     <a href="https://github.com/korall839/packer">packer</a>
+                </div>
+                <div class="prodgect">
+                    <a href="https://github.com/korall839/helper">helper (исходник)</a>
+                </div>
+                <div class="prodgect">
+                    <a href="https://github.com/korall839/hard-game">хард аркада</a>
+                </div>
+                <div class="prodgect">
+                    <a href="fractal.html">мой фрактал</a>
                 </div>
             </div>
         </div>
