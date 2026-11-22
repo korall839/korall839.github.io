@@ -1,0 +1,69 @@
+main {
+    background-color: rgb(20, 10, 30);
+    border-radius: 30px;
+    border: 1px solid;
+    border-color: rgb(25, 45, 50);
+}
+body {
+    background-color: rgb(10, 0, 15);
+    color: #7777ff;
+    text-align: center;
+}
+p {
+    color: #b8b8b8;
+}
+a {
+    color: blueviolet;
+    &.back {
+        display: block;
+        text-align: left;
+    }
+}
+div {
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: rgb(0, 200, 255);    
+    &.in-3d {
+        border-color: transparent;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 0.5s;
+        &:hover{
+            transform: rotateX(-3deg) rotateY(3deg);
+        }
+        & .d3 {
+            &:not(:last-child) {
+                user-select: none;
+            }
+            border-color: transparent;
+            color: hsl(275, 100%, calc(90% - var(--i) * 11%));
+            position: absolute;
+            inset: 0;
+            transform: translateZ(calc(var(--i)*15px));
+        }
+    }
+    &.no_line {
+        border-color: rgba(0, 0, 0, 0);
+    }
+    &.line {
+        border-color: rgba(0, 0, 0, 0);
+        display: flex;
+    }
+    &.prodgect {
+        flex: 1;
+        border: 1px solid;
+        border-color: rgb(0, 200, 255);
+    }
+    &.mn {
+        border: 1px solid;
+        border-color: rgb(0, 200, 255);
+    }
+    &.me {
+        border: 2px solid;
+        border-color: rgb(0, 200, 255);
+    }
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
