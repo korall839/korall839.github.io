@@ -341,3 +341,14 @@ p2r.addEventListener('click',() =>{
         };
     });
 });
+
+document.addEventListener('click',(e) =>{
+    const p=document.createElement('div');
+    p.classList.add("click");
+    p.style.left=e.pageX + "px";
+    p.style.top=e.pageY + "px";
+
+    document.body.appendChild(p);
+
+    setTimeout(() => p.remove(), 1000)
+});

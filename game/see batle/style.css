@@ -1,4 +1,11 @@
 div {
+    &.click {
+        height: 10px;
+        width: 10px;
+        background-color: white;
+        position: absolute;
+        border-radius: 90px;
+    }
     &.p1 {
         height: 30px;
         width: 30px;
