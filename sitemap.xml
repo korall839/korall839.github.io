@@ -8,4 +8,12 @@
     <loc>https://korall839.github.io/game/see%20batle/</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://korall839.github.io/blog/packer.html</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://korall839.github.io/blog/helper.html</loc>
+    <priority>0.2</priority>
+  </url>
 </urlset>
