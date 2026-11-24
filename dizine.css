@@ -28,6 +28,9 @@ div {
         position: relative;
         transform-style: preserve-3d;
         transition: 0.5s;
+        & .notext::before {
+            content: attr(data-text);
+        }
         &:hover{
             transform: rotateX(-3deg) rotateY(3deg);
         }
