@@ -62,7 +62,7 @@ text3.forEach((w) => {
 const all_3d= document.querySelector('.in-3d');
 
 if (all_3d) {
-let i=0
+    let i=0
 
     all_3d.addEventListener('click',() => {
         if (i == 0) {
@@ -87,3 +87,21 @@ let i=0
         }
     });
 }
+
+document.querySelectorAll("spawn").forEach( (spawn) => {
+    setInterval(() => {
+        const sn = document.createElement("div");
+
+        sn.textContent=spawn.dataset.text || "";
+        sn.className="spawn";
+
+        sn.style.position="fixed";
+        sn.style.pointerEvents="none";
+        sn.style.left=Math.random() *90 +"vw";
+        sn.style.top=Math.random() *90 +"vh";
+
+        document.body.appendChild(sn);
+        setTimeout( () => sn.remove(),5000);
+    },2000 + (Math.random()*750));
+});
+
