@@ -26,6 +26,7 @@ div {
     &.spawn {
         border-color: rgba(0, 0, 0, 0);
         color: rgba(137, 43, 226, 0.15);
+        transition: color 0.65s ease;
     }
     &.in-3d {
         border-color: transparent;

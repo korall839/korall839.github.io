@@ -96,9 +96,17 @@ document.querySelectorAll("spawn").forEach( (spawn) => {
         sn.className="spawn";
 
         sn.style.position="fixed";
-        sn.style.pointerEvents="none";
+        sn.style.pointerEvents="auto";
         sn.style.left=Math.random() *90 +"vw";
         sn.style.top=Math.random() *90 +"vh";
+
+        sn.addEventListener('click', () => {
+            sn.style.color='rgba(160,50,230,0.8)';
+            setTimeout(()=>{
+                sn.style.color='rgba(255,0,0,0)';
+                setTimeout(()=> sn.remove(),650);
+            },1000);
+        });
 
         document.body.appendChild(sn);
         setTimeout( () => sn.remove(),5000);
